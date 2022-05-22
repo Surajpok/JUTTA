@@ -9,61 +9,117 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 40%;
   padding: 20px;
   background-color: white;
+  display: flex;
 `;
 
+const FormWrapper = styled.div`
+  margin: 100px 80px;
+`;
+
+const MiniTitle = styled.p`
+  font-size: 18px;
+  color:gray;
+`;
 const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 50px;
+  font-weight: 700;
+`;
+
+const Dot = styled.span`
+  font-size:60px;
+  color: lightcoral;
+`;
+
+const Link = styled.span`
+color: lightcoral;
+padding-left: 5px ;
 `;
 
 const Form = styled.form`
+  padding-top:10px;
   display: flex;
   flex-wrap: wrap;
 `;
 
+const InputWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const Input = styled.input`
-  flex: 1;
-  min-width: 40%;
-  margin: 20px 10px 0 0;
-  padding: 10px;
+  width: 100%;
+  margin: 15px 20px 0 0;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7fcff;
+  font-size:18px;
 `;
 
 const Agreement = styled.span`
-  font-size: 15px;
+  font-size: 18px;
   margin: 20px 0;
 `;
 
 const Button = styled.button`
-width: 40%;
+width: 100%;
 border: none;
-padding: 15px 20px;
-background-color: gray;
+padding: 20px 20px;
+background-color: lightcoral;
 color:white;
 cursor: pointer;
 font-size: 18px;
+margin: 20px 20px 0 0;
 `;
 
+const ImgWrapper = styled.div`
+  flex: 1;
+`;
 
+const Image = styled.img`
+  height: 95vh;
+  width: 50vw;
+  object-fit: cover;
+`;
 const Register = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Lets Create An Account</Title>
+       <FormWrapper>
+       <MiniTitle>START FOR FREE</MiniTitle>
+        <Title>Create New Account<Dot>.</Dot></Title>
+        <MiniTitle>Already a Member?
+          <Link>
+            Log In
+          </Link>
+        </MiniTitle>
+       
         <Form>
-          <Input placeholder = "First Name" />
-          <Input placeholder = "Last Name" />
+          <InputWrapper>
+            <Input placeholder = "First Name" />
+            <Input placeholder = "Last Name" />
+          </InputWrapper>
           <Input placeholder = "Username" />
           <Input placeholder = "Email" />
-          <Input placeholder = "Password" />
-          <Input placeholder = "Conform Password" />
+          <InputWrapper>
+            <Input placeholder = "Password" />
+            <Input placeholder = "Conform Password" />
+          </InputWrapper>
+          
+          
           <Agreement>
+          <input type = "checkbox"></input>
             By creating an account, I concent to be processing of an personal data in accordance with the <b>Privacy Policy</b>
           </Agreement>
+          
           <Button>Sign Up</Button>
+          <Button>Login With Google</Button>
         </Form>
+        </FormWrapper>
+        <ImgWrapper>
+          <Image src ="./image/man.jpeg"/>
+        </ImgWrapper>
       </Wrapper>
     </Container>
   )
