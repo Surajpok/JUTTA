@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
 flex: 1;
@@ -27,6 +27,7 @@ const Title = styled.h1`
 color:#fff;
 margin: 20px;
 font-weight: 600;
+${mobile({fontSize:"30px"})}
 `;
 const Button = styled.button`
 border: none;
@@ -34,6 +35,7 @@ padding: 10px;
 background-color: white;
 color: gray;
 cursor: pointer;
+${mobile({padding:"5px"})}
 `;
 
 const CatagoryItem = ({item}) => {

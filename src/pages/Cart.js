@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import { Add, Remove } from '@material-ui/icons';
+import { mobile } from '../Responsive';
 
 const Container = styled.div`
 
@@ -11,7 +12,7 @@ const Container = styled.div`
 const Wrapper = styled.h1`
     padding: 20px;
     background-color: #f9fafb;
-
+  ${mobile({padding:"10px"})}
 `;
 
 const Top = styled.div`
@@ -30,6 +31,7 @@ const Title = styled.div`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({flexDirection:"column"})}
 `;
 // const TopTexts = styled.div`
 
@@ -49,31 +51,38 @@ const Info = styled.div`
     border-radius: 10px;
     background-color: #fff;
     flex: 4;
-
+    ${mobile({marginRight:"0", padding:"5px",flex:"1",overflow:"hidden"})}
 `;
 
 const Product  = styled.div`
     display: flex;
     justify-content: space-between;
+    height: 15vh;
 `;
 
 const ProductDetail  = styled.div`
-    flex: 2;
+    flex: 1;
     display: flex;
+    ${mobile({flex:"1"})}
+
 `;
 
 const Image  = styled.img`
     width: 200px;
     border-radius: 10px;
+    object-fit: cover;
+    ${mobile({width:"100px",objectFit:"contain",height:"100%", borderRadius:"10px"})}
 `;
 
 const Details  = styled.div`
-    font-size: 20px;
     font-weight: 200;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    ${mobile({padding:"20px 0"})}
+
+
 `;
 
 const Specifications = styled.div`
@@ -84,13 +93,15 @@ const Specifications = styled.div`
 const ProductName  = styled.span`
     font-size: 20px;
     font-weight: 500;
+    ${mobile({fontSize:"18px"})}
+
 `;
 
 const ProductId = styled.span`
     color: #474747;
     font-size: 20px;
     font-weight: 200;
-
+    ${mobile({fontSize:"18px"})}
 `;
 
 const ProductColor = styled.div`
@@ -98,13 +109,15 @@ const ProductColor = styled.div`
     height: 20px;
     border-radius: 50%;
     background-color: ${props =>props.color};
+    ${mobile({width:"18px", height:"18px"})}
+
 `;
 
 const ProductSize = styled.span`
     font-size: 20px;
     color: #474747;
     font-weight: 200;
-
+    ${mobile({fontSize:"18px"})}
 `;
 
 const PriceDetail  = styled.div`
@@ -113,6 +126,8 @@ const PriceDetail  = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    ${mobile({flex:"2"})}
+
 `;
 const ProductAmountContainer = styled.div`
     display: flex;
@@ -124,12 +139,13 @@ const ProductAmount = styled.div`
     font-size: 20px;
     margin: 5px;
     font-weight: 200;
-
+    ${mobile({fontSize:"18px"})}
 `;
 
 const ProductPrice = styled.div`
     font-size: 20px;
     font-weight: 700;
+    ${mobile({fontSize:"18px"})}
 `;
 
 const Hr = styled.hr`
@@ -148,6 +164,7 @@ const Summery = styled.div`
     background-color: #fff;
     padding: 20px 20px 30px 20px;
     border-radius: 10px;
+    ${mobile({position:"none"})}
 `;
 
 const TopButton = styled.button`
@@ -215,7 +232,7 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src = "./image/shoes2.jpg" alt = "" />
                             <Details>
-                                <ProductName>JESSIE THUNDER SHOES</ProductName>
+                                <ProductName>JESSIE THUNDER</ProductName>
                                 <Specifications>
                                     <ProductId><b>Id:</b>1233434</ProductId>
                                     <ProductColor color="gray"/>

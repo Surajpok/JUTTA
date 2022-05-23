@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {mobile} from "../Responsive";
 
 const Container = styled.div`
   height: 60vh;
@@ -7,15 +8,20 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ${mobile({height:"50vh"})}
 `;
 const Title = styled.h1`
   font-size: 45px;
   margin-bottom: 20px;
+${mobile({fontSize:"30px"})}
+
 `;
 const Description = styled.p`
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
+  ${mobile({textAlign:"center"})}
+
 `;
 const InputContainer = styled.div`
 width: 50%;
@@ -24,6 +30,7 @@ background-color: #fff;
 display: flex;
 justify-content: space-between;
 border: 0px solid lightgray;
+${mobile({justifyContent:"center"})}
 `;
 const Input = styled.input`
 border: none;
@@ -43,6 +50,8 @@ text-transform: uppercase;
 background-color: #000;
 color: #fff;
 cursor: pointer;
+${mobile({padding:"10px"})}
+
 `;
 
 const Newsletter = () => {

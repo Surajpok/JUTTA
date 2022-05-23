@@ -2,33 +2,34 @@ import React from "react";
 import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
   height: 60px;
   border-bottom: 0.1px solid lightgray;
-  @media only screen and (max-width: 380px) {
-    display: none;
-  }
+  ${mobile({height: "50px" })}
 `;
 
 const Wrapper = styled.div`
   font-size: 17px;
-  line-height: 60px;
   margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({margin: "0 5px" })}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({flex: "1" })}
 `;
 
 const Language = styled.span`
   font-size: 16px;
   cursor: pointer;
+  ${mobile({display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -39,6 +40,7 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  ${mobile({marginLeft: "5px",marginRight:"25px", padding:"5px", width:"100%" })}
 `;
 
 const Input = styled.input`
@@ -46,6 +48,7 @@ const Input = styled.input`
   outline: none;
   font-size: 17px;
   width: 100%;
+  ${mobile({width: "50px", fontSize:"15px" })}
 `;
 
 const Center = styled.div`
@@ -53,26 +56,34 @@ const Center = styled.div`
   text-align: center;
   position: relative;
   height: 60px;
+  ${mobile({flex: "1" })}
 `;
 
 const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     height: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  ${mobile({height: "24px",justifyContent:"center",alignItem:"center" })}
+
   }
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  ${mobile({flex:"3", justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 20px;
+  ${mobile({fontSize: "16px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {
@@ -82,8 +93,8 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
-            <Search style ={{color:"Black", fontSize:"25"}}/>
+            <Input placeholder="Search" />
+            <Search style ={{color:"Black", fontSize:"18"}}/>
           </SearchContainer>
         </Left>
         <Center>

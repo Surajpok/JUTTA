@@ -1,9 +1,14 @@
 
 import styled from "styled-components";
+import { mobile } from "../Responsive";
+import Announcement from "../components/Announcement";
+import Navbar from "../components/Navbar";
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+
+`;
+
+const LoginContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,10 +18,14 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   display: flex;
+  ${mobile({padding:"5px"})}
+
 `;
 
 const FormWrapper = styled.div`
    margin: 100px 80px;
+  ${mobile({margin:"5px"})}
+
 `;
 
 const MiniTitle = styled.p`
@@ -26,6 +35,8 @@ const MiniTitle = styled.p`
 const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
+  ${mobile({fontSize:"35px",lineHeight:"35px"})}
+
 `;
 
 const Dot = styled.span`
@@ -56,6 +67,8 @@ const Input = styled.input`
   border: none;
   background-color: #f7fcff;
   font-size:18px;
+  ${mobile({margin:"5px 0"})}
+
 `;
 
 const Agreement = styled.span`
@@ -73,10 +86,12 @@ color:white;
 cursor: pointer;
 font-size: 18px;
 margin: 20px 20px 0 0;
+${mobile({margin:"5px 5px"})}
 `;
 
 const ImgWrapper = styled.div`
   flex: 1;
+  ${mobile({display:"none"})}
 `;
 
 const Image = styled.img`
@@ -87,6 +102,9 @@ const Image = styled.img`
 const Login = () => {
   return (
     <Container>
+      <Announcement />
+      <Navbar />
+    <LoginContainer>
       <Wrapper>
         <FormWrapper>
           <MiniTitle>ALREADY A MEMBER</MiniTitle>
@@ -120,6 +138,7 @@ const Login = () => {
           <Image src ="./image/top1.webp"/>
         </ImgWrapper>
       </Wrapper>
+    </LoginContainer>
     </Container>
   )
 }

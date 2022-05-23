@@ -1,14 +1,19 @@
 import { Facebook, Instagram, Mail, Phone, Pinterest, Room } from "@material-ui/icons";
 import styled from "styled-components";
-
+import {mobile} from "../Responsive";
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap-reverse;
+
 `;
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  ${mobile({display:"block"})}
+  `;
+  
 const Left = styled.div`
   flex: 1;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 `;
 const Logo = styled.div`
   img {
@@ -22,7 +27,7 @@ const Desc = styled.p`
 
 const Center = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -42,15 +47,10 @@ const ListItem = styled.li`
   margin-bottom: 25px;
   font-size: 20px;
 `;
-const Copyright = styled.p`
-  font-size: 18px;
-  padding-top: 15px;
-  text-align: center;
-  color: gray;
-`;
+
 const Right = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 `;
 const ContactItem = styled.div`
 font-size: 20px;
@@ -82,9 +82,20 @@ const Payment = styled.img`
 padding-top: 25px;
 width:60%;
 `;
+
+const Copyright = styled.p`
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 20px;
+  ${mobile({textAlign:"center"})}
+
+`;
 const Footer = () => {
   return (
     <Container>
+      <Wrapper>
       <Left>
         <Logo>
           <img src="../image/LAMO.png" alt="" />
@@ -116,7 +127,6 @@ const Footer = () => {
           <ListItem>Terms & Conditions</ListItem>
           <ListItem>Disclosure</ListItem>
         </List>
-        <Copyright>Copyright © 2022 | JUTTA | All Right Reserved.</Copyright>
       </Center>
       <Right>
         <Title>Contact</Title>
@@ -136,7 +146,10 @@ const Footer = () => {
         </SocialContainer>
         <Payment src = "../image/payment.png" alt ="" />
       </Right>
+      </Wrapper>
+      <Copyright>Copyright © 2022 | JUTTA | All Right Reserved.</Copyright>
     </Container>
+    
   );
 };
 

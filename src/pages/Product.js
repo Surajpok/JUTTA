@@ -1,9 +1,10 @@
-import { Add, Remove } from '@material-ui/icons'
+import { Add, Directions, Remove } from '@material-ui/icons'
 import styled from 'styled-components'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
+import { mobile } from '../Responsive';
 
 const Container = styled.div`
 
@@ -12,6 +13,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${mobile({padding:"10px",flexDirection:"column"})}
 `;
 
 const ImgContainer = styled.div`
