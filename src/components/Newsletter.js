@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 45px;
   margin-bottom: 20px;
 `;
 const Description = styled.p`

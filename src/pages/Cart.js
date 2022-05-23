@@ -23,7 +23,7 @@ const Top = styled.div`
 
 const Title = styled.div`
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom: 10px;
 `;
 
@@ -76,6 +76,11 @@ const Details  = styled.div`
     justify-content: space-around;
 `;
 
+const Specifications = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
 const ProductName  = styled.span`
     font-size: 20px;
     font-weight: 500;
@@ -123,8 +128,8 @@ const ProductAmount = styled.div`
 `;
 
 const ProductPrice = styled.div`
-    font-size: 25px;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 700;
 `;
 
 const Hr = styled.hr`
@@ -204,36 +209,18 @@ const Cart = () => {
                 
                 <Info>
                 <Title>Your Order</Title>
-                    <Hr />
-                    <Product>
-                        <ProductDetail>
-                            <Image src = "./image/shoes1.jpg" alt = "" />
-                            <Details>
-                                <ProductName>GOLDSTAR NEAKERS ON FIRE</ProductName>
-                                <ProductId><b>Id:</b>1233434</ProductId>
-                                <ProductColor color="black"/>
-                                <ProductSize><b>Size:</b>26</ProductSize>
-                            </Details>
-                        </ProductDetail>
-                        <PriceDetail>
-                            <ProductAmountContainer>
-                                <Add />
-                                <ProductAmount>2</ProductAmount>
-                                <Remove />
-                            </ProductAmountContainer>
-                            <ProductPrice>Rs.500</ProductPrice>
-                        </PriceDetail>
-                    </Product>
-                    <Hr />
-                    <Hr />
-                    <Product>
+                <Hr />
+                <Hr />
+                <Product>
                         <ProductDetail>
                             <Image src = "./image/shoes2.jpg" alt = "" />
                             <Details>
                                 <ProductName>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>Id:</b>1233434</ProductId>
-                                <ProductColor color="black"/>
-                                <ProductSize><b>Size:</b>26</ProductSize>
+                                <Specifications>
+                                    <ProductId><b>Id:</b>1233434</ProductId>
+                                    <ProductColor color="gray"/>
+                                    <ProductSize><b>Size:</b>26</ProductSize>
+                                </Specifications>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
@@ -248,14 +235,42 @@ const Cart = () => {
                     
                     <Hr />
                     <Hr />
+                    
+                    <Hr />
                     <Product>
                         <ProductDetail>
                             <Image src = "./image/shoes2.jpg" alt = "" />
                             <Details>
                                 <ProductName>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>Id:</b>1233434</ProductId>
-                                <ProductColor color="black"/>
-                                <ProductSize><b>Size:</b>26</ProductSize>
+                                <Specifications>
+                                    <ProductId><b>Id:</b>1233434</ProductId>
+                                    <ProductColor color="black"/>
+                                    <ProductSize><b>Size:</b>26</ProductSize>
+                                </Specifications>
+                            </Details>
+                        </ProductDetail>
+                        <PriceDetail>
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>2</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>Rs.1500</ProductPrice>
+                        </PriceDetail>
+                    </Product>
+                    <Hr />
+                    <Hr />
+                    <Hr />
+                    <Product>
+                        <ProductDetail>
+                            <Image src = "./image/shoes2.jpg" alt = "" />
+                            <Details>
+                                <ProductName>JESSIE THUNDER SHOES</ProductName>
+                                <Specifications>
+                                    <ProductId><b>Id:</b>1233434</ProductId>
+                                    <ProductColor color="blue"/>
+                                    <ProductSize><b>Size:</b>26</ProductSize>
+                                </Specifications>
                             </Details>
                         </ProductDetail>
                         <PriceDetail>
@@ -269,49 +284,6 @@ const Cart = () => {
                     </Product>
                     
                     <Hr />
-                    <Hr />
-                    <Product>
-                        <ProductDetail>
-                            <Image src = "./image/shoes2.jpg" alt = "" />
-                            <Details>
-                                <ProductName>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>Id:</b>1233434</ProductId>
-                                <ProductColor color="black"/>
-                                <ProductSize><b>Size:</b>26</ProductSize>
-                            </Details>
-                        </ProductDetail>
-                        <PriceDetail>
-                            <ProductAmountContainer>
-                                <Add />
-                                <ProductAmount>2</ProductAmount>
-                                <Remove />
-                            </ProductAmountContainer>
-                            <ProductPrice>Rs.1500</ProductPrice>
-                        </PriceDetail>
-                    </Product>
-                    
-                    <Hr />
-                    <Hr />
-                    <Product>
-                        <ProductDetail>
-                            <Image src = "./image/shoes2.jpg" alt = "" />
-                            <Details>
-                                <ProductName>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>Id:</b>1233434</ProductId>
-                                <ProductColor color="black"/>
-                                <ProductSize><b>Size:</b>26</ProductSize>
-                            </Details>
-                        </ProductDetail>
-                        <PriceDetail>
-                            <ProductAmountContainer>
-                                <Add />
-                                <ProductAmount>2</ProductAmount>
-                                <Remove />
-                            </ProductAmountContainer>
-                            <ProductPrice>Rs.1500</ProductPrice>
-                        </PriceDetail>
-                    </Product>
-                    
                     <Hr />
                 </Info>
                 <Summery>

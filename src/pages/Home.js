@@ -7,24 +7,26 @@ import Slider from "../components/Slider";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-
-const Hd = styled.h1`
+const Container = styled.div`
+`;
+const Title = styled.h1`
 padding-top: 20px;
 padding-left: 25px;
-font-size: 35px;
+font-size: 30px;
 `
 const home = () => {
   return (
-    <div>
+    <Container>
       <Announcement />
       <Navbar />
       <Slider />
-      <Hd>Catagories</Hd>
+      <Title>Catagories</Title>
       <Catagories />
+      <Title>Tending Product</Title>
       <Products />
       <Newsletter />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

@@ -26,7 +26,7 @@ const Center = styled.div`
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
-  font-size: 35px;
+  font-size: 30px;
 `;
 
 const List = styled.ul`
