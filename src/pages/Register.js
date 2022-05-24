@@ -69,7 +69,7 @@ const Input = styled.input`
 `;
 
 const Agreement = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   margin: 20px 0;
 `;
 
@@ -126,7 +126,7 @@ const Register = () => {
           
           
           <Agreement>
-          <input type = "checkbox"></input>
+          
             By creating an account, I concent to be processing of an personal data in accordance with the <b>Privacy Policy</b>
           </Agreement>
           

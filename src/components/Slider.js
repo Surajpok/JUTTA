@@ -7,7 +7,7 @@ import { mobile } from "../Responsive";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -43,9 +43,11 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #${(props) => props.bg};
   ${mobile({height: "45vh" })}
 
 `;
@@ -108,7 +110,7 @@ const Slider = () => {
       </Arrow>
       <Wrapper slideIndex = {slideIndex}>
         {sliderItems.map((item) => (
-          <Slide key = {item.id}>
+          <Slide bg = {item.bag} key = {item.id}>
             <ImgContainer>
               <Image src={item.img} />
             </ImgContainer>

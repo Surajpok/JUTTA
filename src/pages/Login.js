@@ -126,7 +126,7 @@ const Login = () => {
               
               
               <Agreement>
-              <input type = "checkbox"></input>
+             
                 By creating an account, I concent to be processing of an personal data in accordance with the <b>Privacy Policy</b>
               </Agreement>
               

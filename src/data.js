@@ -4,21 +4,21 @@ export const sliderItems = [
         img:"../../image/top.webp",
         title:"Bumper Sale",
         desc:"Don't Compromise On Style. Get 50% OFF On New Arrival",
-        bg:"f5fafd"
+        bag:"fff"
     },
     {
         id:1,
         img:"../../image/top1.webp",
         title:"Majako Offer",
         desc:"What You See Is What You Get. Get 50% OFF On New Arrival",
-        bg:"f5fafd"
+        bag:"fff"
     },
     {
         id:1,
         img:"../../image/top2.webp",
         title:"Khatra Offer",
         desc:"Buy With Style, Show With Grace. Get 50% OFF On New Arrival",
-        bg:"f5fafd"
+        bag:"fff"
     }
 ];
 export const catagories = [
