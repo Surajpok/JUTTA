@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  font-size: 17px;
+  font-size: 19px;
   margin: 0 20px;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 16px;
   cursor: pointer;
-  ${mobile({display: "none" })}
+  ${mobile({display: "none"})}
 `;
 
 const SearchContainer = styled.div`
@@ -46,7 +46,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   border: none;
   outline: none;
-  font-size: 17px;
+  font-size: 19px;
   width: 100%;
   ${mobile({width: "50px", fontSize:"15px" })}
 `;
