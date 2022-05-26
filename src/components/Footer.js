@@ -88,7 +88,7 @@ const Copyright = styled.p`
   justify-content: center;
   font-size: 18px;
   color: gray;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   ${mobile({textAlign:"center"})}
 
 `;

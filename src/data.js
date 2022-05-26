@@ -1,21 +1,21 @@
 export const sliderItems = [
     {
         id:1,
-        img:"../../image/top.webp",
-        title:"Bumper Sale",
+        img:"../../image/top1.png",
+        title:"The Bumper Offer",
         desc:"Don't Compromise On Style. Get 50% OFF On New Arrival",
         bag:"fff"
     },
     {
         id:1,
-        img:"../../image/top1.webp",
+        img:"../../image/top2.png",
         title:"Majako Offer",
         desc:"What You See Is What You Get. Get 50% OFF On New Arrival",
         bag:"fff"
     },
     {
         id:1,
-        img:"../../image/top2.webp",
+        img:"../../image/top.png",
         title:"Khatra Offer",
         desc:"Buy With Style, Show With Grace. Get 50% OFF On New Arrival",
         bag:"fff"

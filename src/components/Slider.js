@@ -14,10 +14,11 @@ const Container = styled.div`
   ${mobile({height: "45vh" })}
 `;
 const Arrow = styled.div`
+  transform: scale(1.8); //increases size of an svg material icon
   width: 50px;
   height: 50px;
-  background-color: #fff7f7;
-  border-radius: 50%;
+  /* background-color: #fff7f7; */
+  /* border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,24 +73,26 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 45px;
-  text-transform: uppercase;
+  font-size: 70px;
+  text-transform: capitalize;
   letter-spacing: 3px;
   ${mobile({fontSize: "25px" })}
 `;
 const Desc = styled.p`
   margin: 50px 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-transform: capitalize;
   ${mobile({fontSize: "15px", margin:"30px 0" })}
 
 `;
 const Button = styled.button`
-  padding: 10px;
+  padding: 10px 35px;
   font-size: 20px;
-  background-color: transparent;
+  color: #fff;
+  border-radius: 50px;
+  background-color: #000;
   cursor: pointer;
   ${mobile({padding: "5px", fontSize:"15px"})}
 `;

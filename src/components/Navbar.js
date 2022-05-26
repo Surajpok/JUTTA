@@ -64,7 +64,7 @@ const Logo = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    height: 35px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
