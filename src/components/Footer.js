@@ -2,7 +2,7 @@ import { Facebook, Instagram, Mail, Phone, Pinterest, Room } from "@material-ui/
 import styled from "styled-components";
 import {mobile} from "../Responsive";
 const Container = styled.div`
-  background-color: gray;
+  background-color: #292929;
   color:#fff;
 `;
 const Wrapper = styled.div`
