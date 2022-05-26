@@ -2,7 +2,8 @@ import { Facebook, Instagram, Mail, Phone, Pinterest, Room } from "@material-ui/
 import styled from "styled-components";
 import {mobile} from "../Responsive";
 const Container = styled.div`
-
+  background-color: gray;
+  color:#fff;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -16,9 +17,12 @@ const Left = styled.div`
   padding: 20px 20px 0 20px;
 `;
 const Logo = styled.div`
-  img {
+    font-size: 50px;
+    font-weight: 700;
+  /* img {
     height: 35px;
-  }
+
+  } */
 `;
 const Desc = styled.p`
   font-size: 20px;
@@ -98,7 +102,9 @@ const Footer = () => {
       <Wrapper>
       <Left>
         <Logo>
-          <img src="../image/LAMO.png" alt="" />
+          JUTTA
+          {/* <img src="../image/LAMO.png" alt="" /> */}
+
         </Logo>
         <Desc>
           Sneakers have always been more than just shoes to us. They have a

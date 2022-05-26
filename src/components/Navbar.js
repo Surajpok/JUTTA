@@ -7,7 +7,7 @@ import { mobile } from "../Responsive";
 const Container = styled.div`
   height: 60px;
   border-bottom: 0.1px solid lightgray;
-  ${mobile({height: "50px" })}
+  ${mobile({height: "50px", display:"flex", justifyContent:"center", alignItem:"center" })}
 `;
 
 const Wrapper = styled.div`
@@ -52,18 +52,26 @@ const Input = styled.input`
 `;
 
 const Center = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
   text-align: center;
-  position: relative;
-  height: 60px;
   ${mobile({flex: "1" })}
 `;
 
 const Logo = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  img {
+  font-size: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  a, u {
+    text-decoration: none;
+    color: #000;
+  }
+  ${mobile({fontSize: "25px"})}
+  /* img {
     height: 50px;
     position: absolute;
     top: 50%;
@@ -71,7 +79,7 @@ const Logo = styled.div`
     transform: translate(-50%, -50%);
   ${mobile({height: "24px",justifyContent:"center",alignItem:"center" })}
 
-  }
+  } */
 `;
 const Right = styled.div`
   flex: 1;
@@ -99,7 +107,8 @@ const Navbar = () => {
         </Left>
         <Center>
           <Logo><a href ="/">
-            <img src="../image/LAMO.png" alt="" />
+            {/* <img src="../image/LAMO.png" alt="" /> */}
+            JUTTA
             </a>
           </Logo>
         </Center>
