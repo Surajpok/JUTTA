@@ -1,14 +1,14 @@
 export const sliderItems = [
     {
         id:1,
-        img:"../../image/top1.png",
+        img:"../../image/top2.png",
         title:"The Bumper Offer",
         desc:"Don't Compromise On Style. Get 50% OFF On New Arrival",
         bag:"fff"
     },
     {
         id:1,
-        img:"../../image/top2.png",
+        img:"../../image/top1.png",
         title:"Majako Offer",
         desc:"What You See Is What You Get. Get 50% OFF On New Arrival",
         bag:"fff"
@@ -24,17 +24,17 @@ export const sliderItems = [
 export const catagories = [
     {
         id:1,
-        img:"../../image/man.jpeg",
+        img:"../../image/man3.png",
         title:"Man"
     },
     {
         id:1,
-        img:"../../image/woman.jpeg",
+        img:"../../image/woman.png",
         title:"Woman"
     },
     {
         id:1,
-        img:"../../image/kis.jpeg",
+        img:"../../image/kid2.png",
         title:"Kids"
     }
 ];

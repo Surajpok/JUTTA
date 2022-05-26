@@ -4,7 +4,7 @@ import { mobile } from "../Responsive";
 const Container = styled.div`
 flex: 1;
 margin: 3px;
-height: 70vh;
+height: 50vh;
 position: relative;
 `;
 const Image = styled.img`
