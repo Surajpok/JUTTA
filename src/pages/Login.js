@@ -72,7 +72,7 @@ const Input = styled.input`
 `;
 
 const Agreement = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   margin: 35px 0;
   
 `;

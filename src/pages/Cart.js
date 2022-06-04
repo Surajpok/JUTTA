@@ -232,7 +232,7 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src = "./image/shoes2.jpg" alt = "" />
                             <Details>
-                                <ProductName>JESSIE THUNDER</ProductName>
+                                <ProductName>JESSIE THUNDER SHOES</ProductName>
                                 <Specifications>
                                     <ProductId><b>Id:</b>1233434</ProductId>
                                     <ProductColor color="gray"/>
@@ -249,10 +249,32 @@ const Cart = () => {
                             <ProductPrice>Rs.1500</ProductPrice>
                         </PriceDetail>
                     </Product>
-                    
                     <Hr />
                     <Hr />
-                    
+                    <Hr />
+                <Product>
+                        <ProductDetail>
+                            <Image src = "./image/shoes2.jpg" alt = "" />
+                            <Details>
+                                <ProductName>JESSIE THUNDER SHOES</ProductName>
+                                <Specifications>
+                                    <ProductId><b>Id:</b>1233434</ProductId>
+                                    <ProductColor color="red"/>
+                                    <ProductSize><b>Size:</b>26</ProductSize>
+                                </Specifications>
+                            </Details>
+                        </ProductDetail>
+                        <PriceDetail>
+                            <ProductAmountContainer>
+                                <Add />
+                                <ProductAmount>2</ProductAmount>
+                                <Remove />
+                            </ProductAmountContainer>
+                            <ProductPrice>Rs.1500</ProductPrice>
+                        </PriceDetail>
+                    </Product>
+                    <Hr />
+                    <Hr />
                     <Hr />
                     <Product>
                         <ProductDetail>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 import { mobile } from "../Responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -89,6 +90,10 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
+  a{
+    text-decoration: none;
+    color: #000;
+  }
   cursor: pointer;
   margin-left: 20px;
   ${mobile({fontSize: "16px", marginLeft: "10px" })}
@@ -106,15 +111,15 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo><a href ="/">
+          <Logo><Link to="/">
             {/* <img src="../image/LAMO.png" alt="" /> */}
             JUTTA
-            </a>
+            </Link>
           </Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem><Link to= "/register">Register</Link></MenuItem>
+          <MenuItem><Link to= "/login">Sign In</Link></MenuItem>
           <MenuItem>
             <Badge badgeContent={2} color="primary">
               <ShoppingCartOutlined color="action" />
