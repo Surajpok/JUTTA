@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { mobile } from "../Responsive";
 import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 const Container = styled.div`
 
@@ -14,14 +16,14 @@ const RegisterContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 20px;
+  /* padding: 20px; */
   background-color: white;
   display: flex;
   ${mobile({padding:"5px"})}
 `;
 
 const FormWrapper = styled.div`
-  margin: 100px 80px;
+  margin: 50px 80px;
   ${mobile({margin:"5px"})}
 `;
 
@@ -77,7 +79,7 @@ const Button = styled.button`
 width: 100%;
 border: none;
 padding: 20px 20px;
-background-color: lightcoral;
+background-color: #000;
 color:white;
 cursor: pointer;
 font-size: 18px;
@@ -88,11 +90,12 @@ ${mobile({margin:"5px 5px"})}
 
 const ImgWrapper = styled.div`
   flex: 1;
+  height: 110vh;
   ${mobile({display:"none"})}
 `;
 
 const Image = styled.img`
-  height: 95vh;
+  height: 110vh;
   width: 50vw;
   object-fit: cover;
 `;

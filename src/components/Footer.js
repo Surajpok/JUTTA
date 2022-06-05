@@ -1,6 +1,7 @@
-import { Facebook, Instagram, Mail, Phone, Pinterest, Room } from "@material-ui/icons";
+import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
 import {mobile} from "../Responsive";
+import { Link } from "react-router-dom";
 const Container = styled.div`
   background-color: #292929;
   color:#fff;
@@ -8,6 +9,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   ${mobile({display:"block"})}
   `;
   
@@ -15,10 +17,16 @@ const Left = styled.div`
   flex: 1;
   position: relative;
   padding: 20px 20px 0 20px;
+  ${mobile({padding: "10px 10px 0 10px"})}
 `;
 const Logo = styled.div`
     font-size: 50px;
     font-weight: 700;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    ${mobile({fontSize: "35px"})}
   /* img {
     height: 35px;
 
@@ -32,6 +40,9 @@ const Desc = styled.p`
 const Center = styled.div`
   flex: 1;
   padding: 20px 20px 0 20px;
+  ${mobile({padding: "10px 10px 0 10px"})}
+
+  
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -55,6 +66,8 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px 20px 0 20px;
+  ${mobile({padding: "10px 10px 0 10px"})}
+
 `;
 const ContactItem = styled.div`
 font-size: 20px;
@@ -102,9 +115,10 @@ const Footer = () => {
       <Wrapper>
       <Left>
         <Logo>
-          JUTTA
-          {/* <img src="../image/LAMO.png" alt="" /> */}
-
+          <Link to="/">
+            JUTTA
+            {/* <img src="../image/LAMO.png" alt="" /> */}
+          </Link>
         </Logo>
         <Desc>
           Sneakers have always been more than just shoes to us. They have a
@@ -148,6 +162,9 @@ const Footer = () => {
           </SocialIcon>
           <SocialIcon color="E60023">
             <Pinterest />
+          </SocialIcon>
+          <SocialIcon color="00b5ff">
+            <Twitter />
           </SocialIcon>
         </SocialContainer>
         <Payment src = "../image/payment.png" alt ="" />

@@ -15,7 +15,7 @@ const LoginContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 20px;
+  /* padding: 20px; */
   background-color: white;
   display: flex;
   ${mobile({padding:"5px"})}
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 const FormWrapper = styled.div`
-   margin: 100px 80px;
+   margin: 50px 80px;
   ${mobile({margin:"5px"})}
 
 `;
@@ -81,7 +81,7 @@ const Button = styled.button`
 width: 100%;
 border: none;
 padding: 20px 20px;
-background-color: lightcoral;
+background-color: #000;
 color:white;
 cursor: pointer;
 font-size: 18px;
@@ -95,7 +95,7 @@ const ImgWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  height: 95vh;
+  height: 100vh;
   width: 50vw;
   object-fit: cover;
 `;

@@ -56,7 +56,7 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
-  ${mobile({ flex:"2" })}
+  ${mobile({ flex:"1" })}
 `;
 
 const Image = styled.img`
@@ -64,6 +64,7 @@ const Image = styled.img`
   width: 100%;
   object-fit: cover;
   object-position: bottom -20px;
+  ${mobile({ objectFit:"contain" })}
 `;
 
 const InfoContainer = styled.div`

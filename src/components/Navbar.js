@@ -17,14 +17,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({margin: "0 5px" })}
+  ${mobile({margin: " 0 10px 0 0px" })}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  ${mobile({flex: "1" })}
+  ${mobile({flex: "1.5" })}
 `;
 
 const Language = styled.span`
@@ -41,7 +41,7 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
-  ${mobile({marginLeft: "5px",marginRight:"25px", padding:"5px", width:"100%" })}
+  ${mobile({marginLeft: "5px",marginRight:"5px", padding:"5px 5px 5px 10px", width:"100%" })}
 `;
 
 const Input = styled.input`
@@ -49,7 +49,7 @@ const Input = styled.input`
   outline: none;
   font-size: 19px;
   width: 100%;
-  ${mobile({width: "50px", fontSize:"15px" })}
+  ${mobile({width: "100%", fontSize:"15px" })}
 `;
 
 const Center = styled.div`
@@ -58,20 +58,22 @@ const Center = styled.div`
   justify-content: center;
   flex: 1;
   text-align: center;
-  ${mobile({flex: "1" })}
+  ${mobile({flex: "0.5" })}
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 50px;
+  text-align: center;
   font-weight: 700;
   cursor: pointer;
   a, u {
     text-decoration: none;
     color: #000;
   }
-  ${mobile({fontSize: "25px"})}
+  ${mobile({fontSize: "20px",margin:"0",padding:"0"})}
   /* img {
     height: 50px;
     position: absolute;
@@ -86,7 +88,7 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  ${mobile({flex:"3", justifyContent: "center" })}
+  ${mobile({flex:"1.5", justifyContent: "space-evenly",marginRight:"0" })}
 `;
 
 const MenuItem = styled.div`
@@ -96,7 +98,7 @@ const MenuItem = styled.div`
   }
   cursor: pointer;
   margin-left: 20px;
-  ${mobile({fontSize: "16px", marginLeft: "10px" })}
+  ${mobile({fontSize: "15px", paddingLeft: "0px",margin:"0" })}
 `;
 
 const Navbar = () => {
@@ -118,8 +120,8 @@ const Navbar = () => {
           </Logo>
         </Center>
         <Right>
-          <MenuItem><Link to= "/register">Register</Link></MenuItem>
-          <MenuItem><Link to= "/login">Sign In</Link></MenuItem>
+          <MenuItem><Link to= "/register">Sign Up</Link></MenuItem>
+          <MenuItem><Link to= "/login">Login</Link></MenuItem>
           <MenuItem>
             <Badge badgeContent={2} color="primary">
               <ShoppingCartOutlined color="action" />

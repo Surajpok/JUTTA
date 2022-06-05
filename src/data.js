@@ -25,17 +25,20 @@ export const catagories = [
     {
         id:1,
         img:"../../image/man3.png",
-        title:"Man"
+        title:"Man",
+        cat:"man"
     },
     {
         id:1,
         img:"../../image/woman.png",
-        title:"Woman"
+        title:"Women",
+        cat:"women"
     },
     {
         id:1,
         img:"../../image/kid2.png",
-        title:"Kids"
+        title:"Kids",
+        cat:"kids"
     }
 ];
 
