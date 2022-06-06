@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { mobile } from "../Responsive";
 import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
 
@@ -19,23 +20,22 @@ const Wrapper = styled.div`
   background-color: white;
   display: flex;
   ${mobile({padding:"5px"})}
-
 `;
 
 const FormWrapper = styled.div`
-   margin: 50px 80px;
+  margin: 50px 80px;
   ${mobile({margin:"5px"})}
-
 `;
 
 const MiniTitle = styled.p`
   font-size: 18px;
   color:gray;
+  ${mobile({margin:"10px"})}
 `;
 const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
-  ${mobile({fontSize:"35px",lineHeight:"35px"})}
+  ${mobile({fontSize:"35px",lineHeight:"35px",margin:"10px"})}
 
 `;
 
@@ -44,9 +44,13 @@ const Dot = styled.span`
   color: lightcoral;
 `;
 
-const Link = styled.span`
-color: lightcoral;
-padding-left: 5px ;
+const MiniTitleLink = styled.span`
+
+a{
+  text-decoration: none;
+  color: lightcoral;
+  padding-left: 5px ;
+}
 `;
 
 const Form = styled.form`
@@ -67,14 +71,14 @@ const Input = styled.input`
   border: none;
   background-color: #f7fcff;
   font-size:18px;
-  ${mobile({margin:"5px 0"})}
+  ${mobile({margin:"5px",padding:"10px"})}
 
 `;
 
 const Agreement = styled.span`
   font-size: 16px;
-  margin: 35px 0;
-  
+  margin: 20px 0;
+  ${mobile({margin:"10px"})}
 `;
 
 const Button = styled.button`
@@ -87,15 +91,17 @@ cursor: pointer;
 font-size: 18px;
 margin: 20px 20px 0 0;
 ${mobile({margin:"5px 5px"})}
+
 `;
 
 const ImgWrapper = styled.div`
   flex: 1;
+  height: 110vh;
   ${mobile({display:"none"})}
 `;
 
 const Image = styled.img`
-  height: 100vh;
+  height: 110vh;
   width: 50vw;
   object-fit: cover;
 `;
@@ -110,9 +116,11 @@ const Login = () => {
           <MiniTitle>ALREADY A MEMBER</MiniTitle>
             <Title>Lets Login And Start<Dot>.</Dot></Title>
             <MiniTitle>Don't Have Account?
-              <Link>
-                Sign Up
-              </Link>
+              <MiniTitleLink>
+                <Link to = "/register">
+                  Sign Up
+                </Link>
+              </MiniTitleLink>
             </MiniTitle>
           
             <Form>

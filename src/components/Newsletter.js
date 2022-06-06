@@ -31,7 +31,7 @@ background-color: #fff;
 display: flex;
 justify-content: space-between;
 border: 0px solid lightgray;
-${mobile({justifyContent:"center"})}
+${mobile({width:"90%",justifyContent:"center"})}
 `;
 const Input = styled.input`
 border: none;
@@ -39,12 +39,13 @@ font-size: 18px;
 display: flex;
 padding: 20px;
 height: 40px;
-flex: 8;
+flex: 2;
+${mobile({padding:"10px",width:"30%"})}
 
 `;
 const Button = styled.button`
 border: none;
-flex: 3;
+flex: 1;
 font-size: 18px;
 height: 40px;
 text-transform: uppercase;

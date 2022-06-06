@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../Responsive";
 import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
 
@@ -30,11 +29,12 @@ const FormWrapper = styled.div`
 const MiniTitle = styled.p`
   font-size: 18px;
   color:gray;
+  ${mobile({margin:"10px"})}
 `;
 const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
-  ${mobile({fontSize:"35px",lineHeight:"35px"})}
+  ${mobile({fontSize:"35px",lineHeight:"35px",margin:"10px"})}
 
 `;
 
@@ -43,9 +43,13 @@ const Dot = styled.span`
   color: lightcoral;
 `;
 
-const Link = styled.span`
-color: lightcoral;
-padding-left: 5px ;
+const MiniTitleLink = styled.span`
+
+a{
+  text-decoration: none;
+  color: lightcoral;
+  padding-left: 5px ;
+}
 `;
 
 const Form = styled.form`
@@ -66,13 +70,14 @@ const Input = styled.input`
   border: none;
   background-color: #f7fcff;
   font-size:18px;
-  ${mobile({margin:"5px 0"})}
+  ${mobile({margin:"5px",padding:"10px"})}
 
 `;
 
 const Agreement = styled.span`
   font-size: 16px;
   margin: 20px 0;
+  ${mobile({margin:"10px"})}
 `;
 
 const Button = styled.button`
@@ -110,9 +115,11 @@ const Register = () => {
        <MiniTitle>START FOR FREE</MiniTitle>
         <Title>Create New Account<Dot>.</Dot></Title>
         <MiniTitle>Already a Member?
-          <Link>
+          <MiniTitleLink>
+          <Link to = "/Login">
             Log In
           </Link>
+          </MiniTitleLink>
         </MiniTitle>
        
         <Form>

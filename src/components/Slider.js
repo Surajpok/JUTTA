@@ -11,7 +11,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({height: "45vh" })}
+  ${mobile({height: "50vh" })}
 `;
 const Arrow = styled.div`
   transform: scale(1.8); //increases size of an svg material icon
@@ -49,7 +49,7 @@ const Slide = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #${(props) => props.bg};
-  ${mobile({height: "45vh" })}
+  ${mobile({height: "50vh" })}
 
 `;
 
@@ -85,7 +85,7 @@ const Desc = styled.p`
   font-weight: 500px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  ${mobile({fontSize: "15px", margin:"30px 0" })}
+  ${mobile({fontSize: "18px", margin:"30px 0" })}
 
 `;
 const Button = styled.button`
@@ -95,7 +95,7 @@ const Button = styled.button`
   border-radius: 50px;
   background-color: #000;
   cursor: pointer;
-  ${mobile({padding: "5px", fontSize:"15px"})}
+  ${mobile({padding: "5px 10px 5px 10px", fontSize:"18px"})}
 `;
 
 const Slider = () => {

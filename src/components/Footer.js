@@ -35,6 +35,8 @@ const Logo = styled.div`
 const Desc = styled.p`
   font-size: 20px;
   margin: 20px 0;
+  ${mobile({fontSize:"18px"})}
+  
 `;
 
 const Center = styled.div`
@@ -61,6 +63,8 @@ const ListItem = styled.li`
   width: 50%;
   margin-bottom: 25px;
   font-size: 20px;
+  ${mobile({fontSize:"18px"})}
+
 `;
 
 const Right = styled.div`
@@ -74,6 +78,8 @@ font-size: 20px;
 margin-bottom: 20px;
 display: flex;
 align-items: center;
+${mobile({fontSize:"18px"})}
+
 `;
 const SocialContainer = styled.div`
   display: flex;

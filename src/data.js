@@ -2,7 +2,7 @@ export const sliderItems = [
     {
         id:1,
         img:"../../image/top2.png",
-        title:"The Bumper Offer",
+        title:"Bumper Offer",
         desc:"Don't Compromise On Style. Get 50% OFF On New Arrival",
         bag:"fff"
     },
