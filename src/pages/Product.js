@@ -122,7 +122,7 @@ const Button = styled.button`
     background-color: white;
   }
 `;
-const Product = () => {
+const Product = ({cat,filters,sort}) => {
   return (
     <Container>
         <Announcement />
