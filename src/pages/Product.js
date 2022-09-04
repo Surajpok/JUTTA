@@ -8,6 +8,9 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../Responsive";
 import { publicRequest } from "../requestMethods";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
+
 
 const Container = styled.div``;
 
@@ -128,6 +131,7 @@ const Product = ({ cat, filters, sort }) => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -148,8 +152,11 @@ const Product = ({ cat, filters, sort }) => {
   };
   const handleClick = ()=>{
     // update cart
-    
-  }
+    dispatch(
+    addProduct({product, quantity})
+    )
+
+  };
   return (
     <Container>
       <Announcement />
