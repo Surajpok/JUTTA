@@ -153,7 +153,7 @@ const Product = ({ cat, filters, sort }) => {
   const handleClick = ()=>{
     // update cart
     dispatch(
-    addProduct({product, quantity})
+    addProduct({...product, quantity, color, size})
     )
 
   };
