@@ -238,8 +238,8 @@ const Cart = () => {
     
         }
     };
-   stripeToken && cart.total>1 && makeRequest();
-  },[stripeToken, cart.total, navigate]);
+   stripeToken && makeRequest();
+  },[stripeToken, cart.total, navigate]); 
 
   return (
     <Container>
