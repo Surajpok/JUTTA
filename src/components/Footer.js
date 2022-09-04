@@ -149,7 +149,7 @@ const Footer = () => {
           <ListItem>Order Tracking</ListItem>
           <ListItem>About</ListItem>
           <ListItem>Contact</ListItem>
-          <ListItem>Privecy Polecy</ListItem>
+          <ListItem>Privacy Policy</ListItem>
           <ListItem>Terms & Conditions</ListItem>
           <ListItem>Disclosure</ListItem>
         </List>

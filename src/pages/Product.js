@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../Responsive";
-import {publicRequest} from "../requestMethods";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div``;
 
@@ -125,18 +125,24 @@ const Product = ({ cat, filters, sort }) => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
-  useEffect(()=>{
-    const getProduct = async ()=>{
-      try{
-        const res = await publicRequest.get("/products/find/"+id);
+  const [quantity, setQuantity] = useState(1);
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
         setProduct(res.data);
-      }catch{
-
-      }
+      } catch {}
     };
     getProduct();
-  },[id])
+  }, [id]);
 
+  const handleQuantity = (type) =>{
+    if(type === "dec"){
+      quantity > 1 && setQuantity(quantity-1);
+    }else{
+      setQuantity(quantity+1);
+    }
+  }
   return (
     <Container>
       <Announcement />
@@ -146,12 +152,8 @@ const Product = ({ cat, filters, sort }) => {
           <Image src={product.img} alt="" />
         </ImgContainer>
         <InfoContainer>
-          <Title>
-          {product.title}
-          </Title>
-          <Desc>
-          {product.desc}
-          </Desc>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
           <Filter>
             <Price>${product.price}</Price>
             <Review>⭐⭐⭐⭐⭐</Review>
@@ -159,26 +161,24 @@ const Product = ({ cat, filters, sort }) => {
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
+              {product.color?.map((c) => (
+                <FilterColor color={c} key={c}  />
+              ))}
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
+              <FilterSize >
+                {product.size?.map((s) => (
+                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                ))}
               </FilterSize>
             </Filter>
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick = {()=>handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick = {()=>handleQuantity("inc")}/>
             </AmountContainer>
             <Button>ADD TO CART</Button>
           </AddContainer>
