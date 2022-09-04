@@ -126,6 +126,9 @@ const Product = ({ cat, filters, sort }) => {
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -136,12 +139,16 @@ const Product = ({ cat, filters, sort }) => {
     getProduct();
   }, [id]);
 
-  const handleQuantity = (type) =>{
-    if(type === "dec"){
-      quantity > 1 && setQuantity(quantity-1);
-    }else{
-      setQuantity(quantity+1);
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
     }
+  };
+  const handleClick = ()=>{
+    // update cart
+    
   }
   return (
     <Container>
@@ -162,12 +169,12 @@ const Product = ({ cat, filters, sort }) => {
             <Filter>
               <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
-                <FilterColor color={c} key={c}  />
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
               ))}
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize >
+              <FilterSize onChange={(e)=>setSize(e.target.value)}>
                 {product.size?.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
                 ))}
@@ -176,11 +183,11 @@ const Product = ({ cat, filters, sort }) => {
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove onClick = {()=>handleQuantity("dec")} />
+              <Remove onClick={() => handleQuantity("dec")} />
               <Amount>{quantity}</Amount>
-              <Add onClick = {()=>handleQuantity("inc")}/>
+              <Add onClick={() => handleQuantity("inc")} />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
