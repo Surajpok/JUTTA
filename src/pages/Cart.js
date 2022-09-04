@@ -5,7 +5,11 @@ import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../Responsive";
 import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
+import { useState } from "react";
 
+
+const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div``;
 
@@ -211,6 +215,14 @@ const PaymentSummery = styled.div`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const [stripeToken, setStripeToken] = useState(null);
+
+  const onToken = (token) => {
+    setStripeToken(token);
+  };
+
+
+  
   return (
     <Container>
       <Announcement />
@@ -262,13 +274,14 @@ const Cart = () => {
                 <Hr />
               </>
             ))}
-
           </Info>
           <Summery>
             <Title>Payment Summery</Title>
             <SummeryItem>
               <SummeryItemText type="subtotal">Subtotal</SummeryItemText>
-              <SummeryItemPrice type="subtotal">Rs. {cart.total}</SummeryItemPrice>
+              <SummeryItemPrice type="subtotal">
+                Rs. {cart.total}
+              </SummeryItemPrice>
             </SummeryItem>
             <SummeryItem>
               <SummeryItemText>Estimated Shipping</SummeryItemText>
@@ -284,7 +297,18 @@ const Cart = () => {
             </SummeryItem>
             <PaymentSummery>
               <TopButton type="none">CONTINUE SHOPPING</TopButton>
-              <TopButton type="filled">CHECKOUT NOW</TopButton>
+              <StripeCheckout
+                name="Jutta"
+                image="https://static-01.daraz.com.np/p/d0500b2f52f2707764551abcbf98feab.jpg"
+                billingAddress
+                shippingAddress
+                description={`Your total is $${cart.total}`}
+                amount={cart.total * 100}
+                token={onToken}
+                stripeKey={KEY}
+              >
+                <TopButton type="filled">CHECKOUT NOW</TopButton>
+              </StripeCheckout>
             </PaymentSummery>
           </Summery>
         </Bottom>
